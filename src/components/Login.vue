@@ -27,7 +27,7 @@ export default {
       let response = AuthService.login({ username: email, password: password }).then((res) => {
         console.log('res', res)
 
-        this.$router.replace("todo");
+          this.$router.replace("todo");
       })
         .catch((err) => {
           this.error = err;
