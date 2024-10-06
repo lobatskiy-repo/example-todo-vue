@@ -6,7 +6,7 @@ class AuthService {
     this.strategy = strategy;
   }
   login(username, password) {
-    this.strategy.login(username, password);
+    return this.strategy.login(username, password);
   }
   logut() {
     this.strategy.logout();
@@ -19,4 +19,4 @@ class AuthService {
   }
 }
 
-export default AuthService;
+export default new AuthService;

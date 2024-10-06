@@ -1,8 +1,9 @@
 class LocalAuthService {
-  login = async (username, password) => {
-    if (username === "admin" && password === "admin") {
+  login({ username, password }) {
+    debugger;
+    if (username === "admin@admin.com" && password === "admin") {
       const user = {
-        username: "admin@gamil.com",
+        username: "admin@admin.com",
         role: "admin",
         token: "admin",
       };
@@ -11,7 +12,7 @@ class LocalAuthService {
     }
 
     return Promise.reject("Invalid username or password");
-  };
+  }
   logut = () => {
     localStorage.removeItem("user");
   };
