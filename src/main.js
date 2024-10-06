@@ -1,6 +1,7 @@
 import { createApp } from "vue";
 import "./style.css";
 import App from "./App.vue";
+import store from "./store/index";
 
 import { createRouter, createWebHistory } from "vue-router";
 import Login from "./components/Login.vue";
@@ -13,7 +14,7 @@ const routes = [
   { path: "/login", component: Login },
   { path: "/todo", component: Todo },
   // { path: "*", component: Page404 },
-  { path: "/register", component: Register },
+  // { path: "/register", component: Register },
 ];
 
 const router = createRouter({
@@ -22,6 +23,6 @@ const router = createRouter({
 });
 
 const app = createApp(App);
-
+app.use(store);
 app.use(router);
 app.mount("#app");
